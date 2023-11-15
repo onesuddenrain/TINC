@@ -1,0 +1,390 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Carrier Profile";
+}
+<div class="w-full text-left">
+    <div class="text-left">
+        <h1 class="text-3xl text-left">Carrier Profile</h1>
+    </div>
+    <form id="Profile" class="w-full flex flex-col items-center text-xl space-y-5">
+        <label class="w-full text-left">
+            The following information automatically will be filled up on Form the of "CARRIER PROFILE" Click 
+            <a href="../Help/CarrierProfile.pdf" target="_blank"><b class="text-blue-500">HERE</b></a> 
+            to view the Form
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Carrier Name<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCarrirName" type="text" id="MainContent_txtCarrirName" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Date<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtDate" type="date" id="MainContent_txtDate" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Street<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtStreet" type="text" id="MainContent_txtStreet" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">City<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCity" type="text" id="MainContent_txtCity" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">State<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtState" type="text" id="MainContent_txtState" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Zip Code<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtZipCode" type="number" id="MainContent_txtZipCode" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">SCAC</label>
+                <input name="ctl00$MainContent$txtSCAC" type="text" id="MainContent_txtSCAC" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Fed ID#</label>
+                <input name="ctl00$MainContent$txtFedId" type="number" id="MainContent_txtFedId" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">MC#<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtMcNumber" type="number" id="MainContent_txtMcNumber" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">DOT#<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtDotNumber" type="number" id="MainContent_txtDotNumber" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtPhone" type="tel" id="MainContent_txtPhone" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Fax</label>
+                <input name="ctl00$MainContent$txtFax" type="number" id="MainContent_txtFax" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Email<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtEmail" type="email" id="MainContent_txtEmail" class="smc:w-1/2 form-control" required="">
+            </div>
+        </div>
+        <!---->
+        <label class="w-full text-left">
+            <b>Remit to Mailing Address</b> (If different form above)
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Street</label>
+                <input name="ctl00$MainContent$txtStreetAbove" type="email" id="MainContent_txtStreetAbove" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">City</label>
+                <input name="ctl00$MainContent$txtCityAbove" type="text" id="MainContent_txtCityAbove" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Sate</label>
+                <input name="ctl00$MainContent$txtStateAbove" type="text" id="MainContent_txtStateAbove" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Zip Code</label>
+                <input name="ctl00$MainContent$txtZipCodeAbove" type="number" id="MainContent_txtZipCodeAbove" class="smc:w-1/2 form-control">
+            </div>
+        </div>
+
+        <label class="w-full text-left">
+            <b>Contact Information</b>
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Dispatcher</label>
+                <input name="ctl00$MainContent$txtDispatcher" type="text" id="MainContent_txtDispatcher" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Main Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtMainPhone" type="tel" id="MainContent_txtMainPhone" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">After Hours Cell or Night<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCellorNight" type="tel" id="MainContent_txtCellorNight" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Email<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtContactEmail" type="email" id="MainContent_txtContactEmail" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Oparations Manager<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtOparationsManager" type="text" id="MainContent_txtOparationsManager" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtContactPhone" type="tel" id="MainContent_txtContactPhone" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Email<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtEmailContact2" type="email" id="MainContent_txtEmailContact2" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Accounts Payable Contact<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtAccountPayableContact" type="text" id="MainContent_txtAccountPayableContact" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Accounts Payable Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtPhoneContact2" type="tel" id="MainContent_txtPhoneContact2" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Accounts Payable Email<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtEmailContact3" type="email" id="MainContent_txtEmailContact3" class="smc:w-1/2 form-control" required="">
+            </div>
+        </div>
+
+        <label class="w-full text-left">
+            <b>Factoring Company Information</b><span class="text-red-500"> *</span>
+        </label>
+        <div class="w-full">
+            <span class="col-sm-1">
+                <input id="MainContent_chkFactoringCompanyInformation" type="checkbox" name="ctl00$MainContent$chkFactoringCompanyInformation" class="factory-company-checkbox w-4 h-4 rounded-[0.25rem !important] me-1">
+            </span>
+            <label class="w-full">
+                Check here if you <span class="text-red-500">DO NOT</span> want to use a Factoring Company
+            </label>
+        </div>
+        <div id="factoryco" class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Factoring Company Name<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtFactoringCompanyName" type="text" id="MainContent_txtFactoringCompanyName" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtPhoneFactoring" type="tel" id="MainContent_txtPhoneFactoring" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Remit to Address<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtRemittoAddress" type="text" id="MainContent_txtRemittoAddress" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">City<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCityFactoring" type="text" id="MainContent_txtCityFactoring" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">State<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtStateFactoring" type="text" id="MainContent_txtStateFactoring" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Zip Code<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtZipCodeFactoring" type="number" id="MainContent_txtZipCodeFactoring" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Contact<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtContactFactoring" type="text" id="MainContent_txtContactFactoring" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Phone<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtPhoneFactoring2" type="tel" id="MainContent_txtPhoneFactoring2" class="smc:w-1/2 form-control" required="">
+            </div>
+        </div>
+
+        <label class="w-full text-left">
+            <b>Equiipment:</b>
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Number of Tractors<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtNumberofTractors" type="number" id="MainContent_txtNumberofTractors" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="text-red-600">Dry Van<span class="text-red-500"> *</span></label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkDryVan" type="checkbox" id="MainContent_chkDryVan" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="text-red-600">Flatbed<span class="text-red-500"> *</span></label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkFlatbed" type="checkbox" id="MainContent_chkFlatbed" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="text-red-600">Reefer<span class="text-red-500"> *</span></label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkReefer" type="checkbox" id="MainContent_chkReefer" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="text-red-600">Hotshot<span class="text-red-500"> *</span></label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkHotshot" type="checkbox" id="MainContent_chkHotshot" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">CDL</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkCDL" type="checkbox" id="MainContent_chkCDL" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">TWIC</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkTWIC" type="checkbox" id="MainContent_chkTWIC" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">Hazmat</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkHazmat" type="checkbox" id="MainContent_chkHazmat" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+        </div>
+
+        <label class="w-full text-left">
+            <b>Traffic Lanes that your company services:</b>
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">North East</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkNorthEast1" type="checkbox" id="MainContent_chkNorthEast1" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">South West</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkSouthWest1" type="checkbox" id="MainContent_chkSouthWest1" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">South East</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkSouthEast2" type="checkbox" id="MainContent_chkSouthEast2" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">North West</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkNorthWest2" type="checkbox" id="MainContent_chkNorthWest2" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">Central</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkCentral" type="checkbox" id="MainContent_chkCentral" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse justify-center smc:flex-row smc:justify-between">
+                <label class="">Mid West</label>
+                <div class="smc:w-1/2 smc:flex smc:items-start">
+                    <input name="ctl00$MainContent$chkMidWest" type="checkbox" id="MainContent_chkMidWest" class="w-4 h-4 rounded-[0.25rem !important] me-1">
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Preferred States or Lanes</label>
+                <input name="ctl00$MainContent$txtPreferredStatesorLanes" type="text" id="MainContent_txtPreferredStatesorLanes" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Email available loads?<span class="text-red-500"> *</span></label>
+                <select name="ctl00$MainContent$cboEmailAvailableLoads" id="MainContent_cboEmailAvailableLoads" class="smc:w-1/2 form-control" required="">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Email Address to send available loads</label>
+                <input name="ctl00$MainContent$txtEmailAddresstosendavailableloads" type="email" id="MainContent_txtEmailAddresstosendavailableloads" class="smc:w-1/2 form-control">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Do you have a locking policy in place?<span class="text-red-500"> *</span></label>
+                <select name="ctl00$MainContent$cboLockingPolicy" id="MainContent_cboLockingPolicy" class="smc:w-1/2 form-control" required="">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Are all drivers required to keep trailer doors locked until reaching their final destination?<span class="text-red-500"> *</span></label>
+                <select name="ctl00$MainContent$cboTrailerDoorsLocked" id="MainContent_cboTrailerDoorsLocked" class="smc:w-1/2 form-control" required="">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Do you perform criminal background checks on drivers?<span class="text-red-500"> *</span></label>
+                <select name="ctl00$MainContent$cboBackgroundChecks" id="MainContent_cboBackgroundChecks" class="smc:w-1/2 form-control" required="">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Safer Stat Rating<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtSaferStatRating" type="text" id="MainContent_txtSaferStatRating" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Date of last Compliance Audit<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtDateiflastComplianceAudit" type="date" id="MainContent_txtDateiflastComplianceAudit" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left"><b>Does your company do business in the state of CA? TRU's registered on ARBER and in compliance with emission standards?</b><span class="text-red-500"> *</span></label>
+                <select name="ctl00$MainContent$cboCABusiness" id="MainContent_cboCABusiness" class="smc:w-1/2 form-control" required="">
+                    <option selected="selected" value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+        </div>
+
+        <label class="w-full text-left">
+            <strong> Please list your CA-ARB Identification Number below or attach a list of all of your ARB &amp; ATCMapproved units.</strong>
+            <h1 class="pt-2">****** Any carrier that fails to supply the above requested information will not be dispatched on any loads and will nullify any prior verbal
+                or written agreement between both parties pertaining to any rate confirmations or promises of services. Any carrier that provides proof of 
+                such registration but fails a CA compliance inspection thereafter, will be revoked as an approved CA carrier and will be prohibited from all 
+                loads originating, destined or traveling through the state of CA ******
+            </h1>
+        </label>
+        <div class="w-full grid grid-cols-1 gap-y-2 smc:grid-cols-2 smc:gap-x-4 smc:gap-y-2">
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Year<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtYear" type="number" id="MainContent_txtYear" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Make<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtMake" type="text" id="MainContent_txtMake" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Color<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtColor" type="text" id="MainContent_txtColor" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Plate#<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtPlate" type="text" id="MainContent_txtPlate" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Last 6 Vin#<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtLastVin" type="number" id="MainContent_txtLastVin" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2">Carrier-Auth. Rep. (Print Name)<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCarrierAuthRepPrintName" type="text" id="MainContent_txtCarrierAuthRepPrintName" class="smc:w-1/2 form-control" required="">
+            </div>
+            <div class="w-full flex flex-col items-start smc:flex-row smc:justify-between">
+                <label class="smc:w-1/2 smc:text-left">Date Acknowledging & Agreeing to Above Terms and Request<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtDateAcknowledgingAgreeingtoAboveTermsandRequest" type="date" id="MainContent_txtDateAcknowledgingAgreeingtoAboveTermsandRequest" class="smc:w-1/2 form-control" required="">
+            </div>
+        </div>
+
+        <div class="w-full flex flex-row items-start justify-start gap-4 pt-5 pb-5">
+            @* <a onclick="javascript:skm_LockScreen();" id="MainContent_btnSaveNext" class="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-200" title="Search" href="javascript:__doPostBack('ctl00$MainContent$btnSaveNext','')">
+            <i class="fas fa-lg fa-fw me-5px fa-floppy-disk"></i> Go To Next Step
+            </a> *@
+            @* <a class="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-200" asp-area="" asp-controller="Home" asp-action="carrierProfile">Go to the Next Step</a> *@
+            <a id="back" class="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-200" asp-area="" asp-controller="Home" asp-action="Index">
+                Go Back
+            </a>
+            <a id="nextStepButton02" class="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-200" asp-action="">
+                Go to the Next Step
+            </a>
+        </div>
+    </form>
+
+</div>

@@ -2,7 +2,132 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="">
+    <div class="text-center">
+        <h1 class="text-3xl">Request for Taxpayer Identification Number and Certification</h1>
+    </div>
+    <form id="w9Form" class="flex flex-col items-center text-xl space-y-5" method="post" asp-controller="Home" asp-action="carrierProfile">
+        <div class="border-b border-gray-600 mb-5">
+            <label>The following information automatically will be filled up on Form-W9. Click <a href="../Help/fw9.pdf" target="_blank"><b class="text-blue-600">HERE</b></a> to view the Form-W9</label>
+        </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">1. Name (as shown on your income tax return). Name is required on this line; do not leave this line blank.<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtName" type="text" id="MainContent_txtName" class="w-full pl-1 text-2xl rounded border border-gray-500" required>
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">2. Business name/disregarded entity name, if different from above.</label>
+                <input name="ctl00$MainContent$txtBusinessName" type="text" id="MainContent_txtBusinessName" class="w-full pl-1 text-2xl rounded border border-gray-500">
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start text-left">
+                <label class="text-left">3. Check appropriate box for federal tax classification of the person whose name is entered on line 1. Check only one of the following seven boxes.<span class="text-red-500"> *</span></label>
+                <div class="bg-[#ffffff] w-full flex flex-col items-start rounded-[0.375rem] border border-gray-500">
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkSingleMemberLLC" type="checkbox" id="MainContent_chkSingleMemberLLC" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                        Individual/sole proprietor or single-member LLC
+                    </label>
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkCcorporation" type="checkbox" id="MainContent_chkCcorporation" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                        C Corporation
+                    </label>
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkSCorporation" type="checkbox" id="MainContent_chkSCorporation" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                        S Corporation
+                    </label>
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkPartnership" type="checkbox" id="MainContent_chkPartnership" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                        Partnership
+                    </label>
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkTrustEstate" type="checkbox" id="MainContent_chkTrustEstate" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                        Trust/estate
+                    </label>
+                    
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4 border-b border-zinc-300">
+                        <input name="ctl00$MainContent$chkLimitedliabilityCompany" type="checkbox" id="MainContent_chkLimitedliabilityCompany" class="tax-classification-checkbox rounded-[0.25rem !important] me-1"> <!-- required -->
+                        Limited liability company. Enter the tax classification (C=C corporation, S=S corporation, P=Partnership) <br />
+                        <input name="ctl00$MainContent$txtTaxClassification" type="text" id="MainContent_txtTaxClassification" class="w-full pl-1 text-2xl rounded border border-gray-400">
+                        <b>Note:</b> Check the appropriate box in the line above for the tax classification of the single-member owner. Do not check
+                        LLC if the LLC is classified as a single-member LLC that is disregarded from the owner unless the owner of the LLC is
+                        another LLC that is not disregarded from the owner for U.S. federal tax purposes. Otherwise, a single-member LLC that
+                        is disregarded from the owner should check the appropriate box for the tax classification of its owner.
+                    </label>
+                    <label class="w-full rounded-tl-[0.375rem] inline-block pt-2 pb-2 pl-4 pr-4">
+                        <input name="ctl00$MainContent$chkOther" type="checkbox" id="MainContent_chkOther" class="tax-classification-checkbox rounded-[0.25rem !important] me-1">
+                         Other (see instructions) <br />
+                        <input name="ctl00$MainContent$txtOther" type="text" id="MainContent_txtOther" class="w-full pl-1 text-2xl rounded border border-gray-400">
+                    </label>
+                </div>
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">
+                    4. Exemptions (codes apply only to certain entities, not individuals; see instructions on page 3):<br />
+                    Exempt payee code (if any)
+                </label>
+                <input name="ctl00$MainContent$txtExemptPayeeCode" type="text" id="MainContent_txtExemptPayeeCode" class="w-full pl-1 text-2xl rounded border border-gray-500">
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">Exemption from FATCA reporting code (if any)</label>
+                <input name="ctl00$MainContent$txtExemptionFromFATCAreportingCode" type="text" id="MainContent_txtExemptionFromFATCAreportingCode" class="w-full pl-1 text-2xl rounded border border-gray-500">
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">5. Address (number, street, and apt. or suite no.) See instructions<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtAddress" type="text" id="MainContent_txtAddress" class="w-full pl-1 text-2xl rounded border border-gray-500" required>
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">6. City, state, and ZIP code<span class="text-red-500"> *</span></label>
+                <input name="ctl00$MainContent$txtCityStateZipCode" type="text" id="MainContent_txtCityStateZipCode" class="w-full pl-1 text-2xl rounded border border-gray-500" required>
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">Requester’s name and address (optional)</label>
+                <textarea name="ctl00$MainContent$txtRequesterNameAddress" id="MainContent_txtRequesterNameAddress" rows="2" cols="20" class="w-full pl-1 text-2xl rounded border border-gray-500" style="height: 73px;"></textarea>
+            </div>
+            <div class="w-full bg-amber-20 flex flex-col justify-start">
+                <label class="text-left">7. List account number(s) here (optional)</label>
+                <input name="ctl00$MainContent$txtListAccountNumber" type="text" id="MainContent_txtListAccountNumber" class="w-full pl-1 text-2xl rounded border border-gray-500">
+            </div>
+
+            <h3 class="w-full text-left text-4xl"><span class="bg-black text-white"> Part I </span>Taxpayer Identification Number (TIN)</h3>
+
+            <div class="w-full mb-1 text-left flex flex-col items-center text-xl space-y-3">
+                <div class="w-full bg-amber-20 flex flex-col justify-start">
+                    <label class="pb-5 text-2xl">
+                        Enter your TIN in the appropriate box. The TIN provided must match the name given on line 1 to avoid
+                        backup withholding. For individuals, this is generally your social security number (SSN). However, for a
+                        resident alien, sole proprietor, or disregarded entity, see the instructions for Part I, later. For other
+                        entities, it is your employer identification number (EIN). If you do not have a number, see How to get a
+                        TIN, later. <br><b>Note:</b> If the account is in more than one name, see the instructions for line 1. Also see What Name and
+                        Number To Give the Requester for guidelines on whose number to enter.
+                    </label>
+                    <label class="form-label"><b>Social security number<span class="text-red-500"> *</span></b></label>
+                <input name="ctl00$MainContent$txtSocialSecurityNumber" type="number" id="MainContent_txtSocialSecurityNumber" class="w-full pl-1 text-2xl rounded border border-gray-500" min="0" required> <!-- oninput="limitInputLength(this, 9)" -->
+                    <span id="errorText" style="color: red;"></span>
+                </div>
+                <div class="w-full bg-amber-20 flex flex-col justify-start">
+                    <label class="form-label"><b>or Employer identification number (optional)</b></label>
+                    <input name="ctl00$MainContent$txtEmployerIdentificationNumber" type="number" id="MainContent_txtEmployerIdentificationNumber" class="w-full pl-1 text-2xl rounded border border-gray-500" oninput="limitInputLength(this, 9)">
+                </div>
+            </div>
+
+            <h3 class="w-full text-left text-4xl"><span class="bg-black text-white"> Part II </span>Certification</h3>
+
+            <label class="w-full mb-[0.5rem] text-left text-2xl pb-5 border-b border-gray-400">
+                Under penalties of perjury, I certify that:<br>
+                1. The number shown on this form is my correct taxpayer identification number (or I am waiting for a number to be issued to me); and<br>
+                2. I am not subject to backup withholding because: (a) I am exempt from backup withholding, or (b) I have not been notified by the Internal Revenue
+                Service (IRS) that I am subject to backup withholding as a result of a failure to report all interest or dividends, or (c) the IRS has notified me that I am
+                no longer subject to backup withholding; and<br>
+                3. I am a U.S. citizen or other U.S. person (defined below); and<br>
+                4. The FATCA code(s) entered on this form (if any) indicating that I am exempt from FATCA reporting is correct.<br>
+                <b>Certification instructions.</b> You must cross out item 2 above if you have been notified by the IRS that you are currently subject to backup withholding because
+                you have failed to report all interest and dividends on your tax return. For real estate transactions, item 2 does not apply. For mortgage interest paid,
+                acquisition or abandonment of secured property, cancellation of debt, contributions to an individual retirement arrangement (IRA), and generally, payments
+                other than interest and dividends, you are not required to sign the certification, but you must provide your correct TIN. See the instructions for Part II, later.
+            </label>
+            <div class="w-full flex flex-col items-start justify-start pt-5 pb-5">
+                <a id="nextStepButton" class="px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-800 focus:outline-none focus:ring focus:ring-green-200" asp-area="" asp-controller="Home" asp-action="carrierProfile">
+                    Go to the Next Step
+                </a>
+            </div>
+    </form>
+
 </div>
